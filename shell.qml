@@ -2,10 +2,14 @@ import Quickshell
 import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
-
-import 'theme.js' as Theme
+import "Modules" as Modules
+import "Widgets" as Widgets
+import "OSD" as OSD
 
 ShellRoot {
+    Widgets.ClockWidget{}
+    Widgets.Visualizer{}
+    OSD.CapsOSD{}
 
     PanelWindow {
         id: bar
@@ -15,18 +19,13 @@ ShellRoot {
           left:true
         }
 	margins {
-	    top: 4
+	    top: 5
 	    left: 15
 	    right: 15
 	}
         implicitHeight: 40
         color: "transparent"
 
-        Rectangle {
-            anchors.fill: parent
-            color: Theme.colors.bg
-	    radius: 20
-        }
         RowLayout {
             anchors.fill: parent
             anchors.leftMargin: 5
@@ -34,16 +33,14 @@ ShellRoot {
             spacing: 8
 
             // Left
-            MenuButton {}
-            Workspaces {}
-	    Player {}
-            Clock {} 
+            Modules.Workspaces {}
+            Modules.Clock {} 
             //Item { Layout.preferredWidth: 595 }  
             // Center        
             Item { Layout.fillWidth: true } 
             // Right
-            Volume {}
-            Network {}
+            Modules.Volume {}
+            Modules.Network {}
 
         }
     }
