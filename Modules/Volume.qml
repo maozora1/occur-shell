@@ -57,7 +57,7 @@ RowLayout {
         font {
             family: "JetBrainsMono Nerd Font Propo"
             pixelSize: 17
-            weight: 600
+            weight: 500
         }
 
         Behavior on color {

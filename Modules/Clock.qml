@@ -20,7 +20,7 @@ import qs
                  family: "Google Sans"
                  letterSpacing: 0
                  pixelSize: 14
-                 weight: 600
+                 weight: 500
                 }   
             SystemClock {
                  id: clock 
@@ -40,7 +40,7 @@ import qs
                  family: "Google Sans"
                  letterSpacing: 0
                  pixelSize: 14
-                 weight: 600
+                 weight: 500
                 }   
             }
 	  }

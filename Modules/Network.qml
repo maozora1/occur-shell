@@ -62,7 +62,7 @@ Rectangle {
 
             font {
                 family: "Google Sans"
-                weight: 600
+                weight: 500
                 pixelSize: 14
             }
 
