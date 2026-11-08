@@ -25,18 +25,18 @@ import qs
                     property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
                     property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 
-                    radius: isActive ? 20 : 6
+                    radius: 70
                     color: isActive ? Colors.md3.primary : (ws ? Colors.md3.secondary : Colors.md3.primary_container)
 
                     implicitHeight: isActive ? 20 : (ws ? 20 : 10)
                     implicitWidth: isActive ? 50 : (ws ? 22 : 10)
 
                     Behavior on implicitWidth {
-                        SpringAnimation { spring: 3; damping: 0.3 }
+                        SpringAnimation { spring: 3.5; damping: 0.25 }
                     }
 
                     Behavior on implicitHeight {
-                        SpringAnimation { spring: 4; damping: 0.4 }
+                        SpringAnimation { spring: 3; damping: 0.2 }
                     }
                     
                     Behavior on color {
@@ -44,7 +44,7 @@ import qs
                     }
 
                     Behavior on radius {
-                        SpringAnimation { spring: 4; damping: 0.3 }
+                        SpringAnimation { spring: 2; damping: 0.5 }
                     }
 
                     Behavior on opacity {

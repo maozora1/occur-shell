@@ -5,11 +5,15 @@ import QtQuick.Layouts
 import "Modules" as Modules
 import "Widgets" as Widgets
 import "OSD" as OSD
+import "Menu" as Menu
 
 ShellRoot {
+    Menu.MainPanel{}
     Widgets.ClockWidget{}
     Widgets.Visualizer{}
+    Widgets.MprisWidget{}
     OSD.CapsOSD{}
+    OSD.Notification{}
 
     PanelWindow {
         id: bar
@@ -33,6 +37,7 @@ ShellRoot {
             spacing: 8
 
             // Left
+	    Modules.CenterButton{}
             Modules.Workspaces {}
             Modules.Clock {} 
             //Item { Layout.preferredWidth: 595 }  
