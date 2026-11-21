@@ -7,7 +7,7 @@ import qs
 
 Rectangle {
     color: Colors.md3.background
-    radius: 15
+    radius: 17
     implicitHeight: 38
     implicitWidth: label.implicitWidth + 40
 

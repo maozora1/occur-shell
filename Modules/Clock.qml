@@ -6,7 +6,7 @@ import qs
         Rectangle {
           implicitHeight: 35
           implicitWidth: layout.implicitWidth + 20
-	  radius: 15
+	  radius: 17
           color: Colors.md3.background
 	  RowLayout {
 	    id: layout

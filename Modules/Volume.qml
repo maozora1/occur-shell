@@ -18,7 +18,7 @@ RowLayout {
         if (!ready) return String.fromCodePoint(0xF0581)
         if (muted) return ""
 
-        if (vol === 0) return String.fromCodePoint(0xF0581)
+        if (vol === 0) return ""
         if (vol < 34) return String.fromCodePoint(0xF057F)
         if (vol < 67) return String.fromCodePoint(0xF0580)
 
@@ -28,7 +28,7 @@ RowLayout {
     Rectangle {
         implicitHeight: 38
         implicitWidth: label.implicitWidth + 40
-        radius: 15
+        radius: 17
         color: Colors.md3.background
 
         Behavior on implicitWidth {
@@ -53,7 +53,7 @@ RowLayout {
     Text {
         id: icon
         text: root.icon
-        color: !root.muted ? Colors.md3.on_surface : Colors.md3.error
+        color: (root.muted || vol === 0) ? Colors.md3.error : Colors.md3.on_surface
         font {
             family: "JetBrainsMono Nerd Font Propo"
             pixelSize: 17
@@ -69,6 +69,7 @@ RowLayout {
         text: {
             if (!root.ready) return "-"
             if (root.muted) return ""
+	    if (root.vol === 0) return ""
 
             return root.vol + "%"
         }

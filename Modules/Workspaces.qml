@@ -9,7 +9,7 @@ import qs
     Rectangle {
         implicitHeight: 38
         implicitWidth: wsLayout.implicitWidth + 25
-        radius: 15  
+        radius: 17  
         color: Colors.md3.background
 
         RowLayout {

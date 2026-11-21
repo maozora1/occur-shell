@@ -9,7 +9,7 @@ Rectangle {
     implicitHeight: 38
     implicitWidth: 80
     color: Colors.md3.background
-    radius: 13
+    radius: 17
 
     RowLayout {
 	anchors.fill: parent

@@ -2,6 +2,7 @@ import Quickshell
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 import qs
 
 PanelWindow {
@@ -69,6 +70,7 @@ PanelWindow {
 	    }
 
 	    Text {
+		id: dateWidget
 		color: Colors.md3.primary
                 text: Qt.formatDateTime(clock.date, "dddd MMM d")
 		font.family: 'Google Sans'
@@ -77,11 +79,31 @@ PanelWindow {
 	    }
 
 	    Text {
+		id: clockWidget
 		color: Colors.md3.primary
                 text: Qt.formatDateTime(clock.date, "hh:mm")
 		font.family: 'Google Sans'
 		font.pixelSize: 90
+	    }
 
+	    DropShadow {
+		anchors.fill: clockWidget
+		horizontalOffset: 3
+		verticalOffset: 3
+		radius: 8
+		color: Colors.md3.shadow
+		source: clockWidget
+		opacity: 0.75
+	    }
+
+	    DropShadow {
+		anchors.fill: dateWidget
+		horizontalOffset: 3
+		verticalOffset: 3
+		radius: 8
+		color: Colors.md3.shadow
+		source: dateWidget
+		opacity: 0.75
 	    }
 	}
 	

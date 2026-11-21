@@ -26,7 +26,7 @@ Rectangle {
 	return String.fromCodePoint(0xF091F + (tier - 1) * 3 )
     }
 
-    radius: 80
+    radius: 16
 
     color: root.active ? Colors.md3.primary : Colors.md3.tertiary
 
